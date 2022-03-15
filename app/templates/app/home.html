@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -19,7 +20,7 @@
     <!-- Theme shortcodes/elements style -->
     <link rel="stylesheet" href="{% static 'app/css/shortcode/shortcodes.css' %}">
     <!-- Theme main style -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'app/css/style.css'%}">
     <!-- Responsive css -->
     <link rel="stylesheet" href="{% static 'app/css/responsive.css' %}">
     <!-- customizer style css -->
@@ -29,7 +30,7 @@
  
 
     <!-- Modernizr JS -->
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="{% static 'app/js/vendor/modernizr-2.8.3.min.js' %}"></script>
 </head>
 
 <body>
@@ -60,7 +61,7 @@
                             <div class="row">
                                 <div class="col-md-2 col-sm-2 col-xs-12">
                                     <div class="logo mt-15">
-                                        <a href="index.html"><img src="images/logo/logo.png" alt=""></a>
+                                        <a href="index.html"><img src="{% static 'app/images/logo/logo.png' %}" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="col-md-10 col-sm-10 hidden-xs">
@@ -190,7 +191,7 @@
                         <div class="col-md-8 col-sm-7">
                             <div class="welcome-text">
                                 <h2>
-                                <span>WELCOEM TO</span> <span class="coloring">Chondo</span>
+                                <span>WELCOME TO</span> <span class="coloring">Chondo</span>
                                 </h2>
                                 <h1 class="cd-headline clip">
                                     <span>THE PERFECT</span>
@@ -247,7 +248,7 @@
                     <div class="col-md-12">
                         <div class="about-chondo">
                             <div class="about-member">
-                                <img src="images/about.jpg" alt="">
+                                <img src="{% static 'app/images/about.jpg' %}" alt="">
                                 <h3>Mohin patwary</h3>
                                 <h5 class="mb-0">hrd head</h5>
                             </div>
@@ -274,7 +275,7 @@
                             <div class="col-md-4">
                                 <div class="single-room">
                                     <div class="room-img">
-                                        <a href="#"><img src="images/room/room1.jpg" alt=""></a>
+                                        <a href="#"><img src="{% static 'app/images/room/room1.jpg' %}" alt=""></a>
                                     </div>
                                     <div class="room-desc">
                                         <div class="room-name">
@@ -292,7 +293,7 @@
                             <div class="col-md-4">
                                 <div class="single-room">
                                     <div class="room-img">
-                                        <a href="#"><img src="images/room/room2.jpg" alt=""></a>
+                                        <a href="#"><img src="{% static 'app/images/room/room2.jpg' %}" alt=""></a>
                                     </div>
                                     <div class="room-desc">
                                         <div class="room-name">
@@ -310,7 +311,7 @@
                             <div class="col-md-4">
                                 <div class="single-room">
                                     <div class="room-img">
-                                        <a href="#"><img src="images/room/room3.jpg" alt=""></a>
+                                        <a href="#"><img src="{% static 'app/images/room/room3.jpg' %}" alt=""></a>
                                     </div>
                                     <div class="room-desc">
                                         <div class="room-name">
@@ -328,7 +329,7 @@
                             <div class="col-md-4">
                                 <div class="single-room">
                                     <div class="room-img">
-                                        <a href="#"><img src="images/room/room1.jpg" alt=""></a>
+                                        <a href="#"><img src="{% static 'app/images/room/room1.jpg' %}" alt=""></a>
                                     </div>
                                     <div class="room-desc">
                                         <div class="room-name">
@@ -346,7 +347,7 @@
                             <div class="col-md-4">
                                 <div class="single-room">
                                     <div class="room-img">
-                                        <a href="#"><img src="images/room/room2.jpg" alt=""></a>
+                                        <a href="#"><img src="{% static 'app/images/room/room2.jpg' %}" alt=""></a>
                                     </div>
                                     <div class="room-desc">
                                         <div class="room-name">
@@ -364,7 +365,7 @@
                             <div class="col-md-4">
                                 <div class="single-room">
                                     <div class="room-img">
-                                        <a href="#"><img src="images/room/room3.jpg" alt=""></a>
+                                        <a href="#"><img src="{% static 'app/images/room/room3.jpg' %}" alt=""></a>
                                     </div>
                                     <div class="room-desc">
                                         <div class="room-name">
@@ -382,7 +383,7 @@
                             <div class="col-md-4">
                                 <div class="single-room">
                                     <div class="room-img">
-                                        <a href="#"><img src="images/room/room1.jpg" alt=""></a>
+                                        <a href="#"><img src="{% static 'app/images/room/room1.jpg' %}" alt=""></a>
                                     </div>
                                     <div class="room-desc">
                                         <div class="room-name">
@@ -400,7 +401,7 @@
                             <div class="col-md-4">
                                 <div class="single-room">
                                     <div class="room-img">
-                                        <a href="#"><img src="images/room/room2.jpg" alt=""></a>
+                                        <a href="#"><img src="{% static 'app/images/room/room2.jpg' %}" alt=""></a>
                                     </div>
                                     <div class="room-desc">
                                         <div class="room-name">
@@ -418,7 +419,7 @@
                             <div class="col-md-4">
                                 <div class="single-room">
                                     <div class="room-img">
-                                        <a href="#"><img src="images/room/room3.jpg" alt=""></a>
+                                        <a href="#"><img src="{% static 'app/images/room/room3.jpg' %}" alt=""></a>
                                     </div>
                                     <div class="room-desc">
                                         <div class="room-name">
@@ -457,7 +458,7 @@
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="single-services">
                                 <div class="services-img">
-                                    <img src="images/services/services1.jpg" alt="">
+                                    <img src="{% static 'app/images/services/services1.jpg' %}" alt="">
                                     <div class="services-title">
                                         <h2>Breakfast & Buffet</h2>
                                     </div>

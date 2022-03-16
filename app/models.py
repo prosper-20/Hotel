@@ -34,3 +34,11 @@ class Room(models.Model):
         self.slug = slugify(self.category)
         super(Room, self).save()
 
+
+class RoomImage(models.Model):
+    room = models.ForeignKey(Room, default=None, on_delete=models.CASCADE)
+    images = models.FileField(upload_to = 'images/')
+ 
+    def __str__(self):
+        return self.room.category
+

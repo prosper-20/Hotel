@@ -40,5 +40,5 @@ class RoomImage(models.Model):
     images = models.FileField(upload_to = 'images/')
  
     def __str__(self):
-        return self.room.category
+        return self.room.description
 

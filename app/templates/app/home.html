@@ -276,7 +276,8 @@
                             <div class="col-md-4">
                                 <div class="single-room">
                                     <div class="room-img">
-                                        <a href="#"><img src="{% static 'app/images/room/room1.jpg' %}" alt=""></a>
+                                        <!-- <a href="#"><img src="{% static 'app/images/room/room1.jpg' %}" alt=""></a> -->
+                                        <a href="#"><img src="{{ room.image.url }}" alt=""></a>
                                     </div>
                                     <div class="room-desc">
                                         <div class="room-name">
@@ -284,7 +285,8 @@
                                             <h3><a href="#">{{ room.category }}</a></h3>
                                         </div>
                                         <div class="room-rent">
-                                            <h5>€ 200 / <span>Night</span></h5>
+                                            <!-- <h5>€ 200 / <span>Night</span></h5> -->
+                                            <h5>€ {{ room.price }} / <span>Night</span></h5>
                                         </div>
                                         <div class="room-book">
                                             <a href="#">Book now</a>

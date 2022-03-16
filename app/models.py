@@ -31,6 +31,6 @@ class Room(models.Model):
 
 
     def save(self, *args, **kwargs): # < here
-        self.slug = slugify(self.title)
+        self.slug = slugify(self.category)
         super(Room, self).save()
 

@@ -24,7 +24,7 @@ class RoomDetailView(DetailView):
 def detail_view(request, slug):
     room = get_object_or_404(Room, slug=slug)
     photos = RoomImage.objects.filter(room=room)
-    return render(request, 'app/detail.html', {
+    return render(request, 'app/room_detail.html', {
         'room':room,
         'photos':photos
     })

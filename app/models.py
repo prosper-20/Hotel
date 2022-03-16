@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 
 
 class Category(models.Model):
@@ -16,8 +17,14 @@ class Room(models.Model):
     capacity = models.IntegerField()
     image = models.ImageField()
     price = models.IntegerField()
+    slug = models.SlugField()
 
 
     def __str__(self):
         return f"{self.number} - {self.category}"
+
+
+    def save(self, *args, **kwargs): # < here
+        self.slug = slugify(self.title)
+        super(Room, self).save()
 

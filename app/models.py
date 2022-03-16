@@ -16,7 +16,7 @@ class Room(models.Model):
     description = models.TextField()
     beds = models.IntegerField()
     capacity = models.IntegerField()
-    image = models.ImageField()
+    image = models.FileField(blank=True)
     price = models.IntegerField()
     slug = models.SlugField()
 

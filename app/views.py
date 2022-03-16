@@ -1,6 +1,6 @@
 from typing import List
-from django.shortcuts import render
-from .models import Room
+from django.shortcuts import render, get_object_or_404
+from .models import Room, RoomImage
 from django.views.generic import ListView, DetailView
 
 
@@ -19,3 +19,12 @@ class HomeView(ListView):
 
 class RoomDetailView(DetailView):
     model = Room
+
+
+def detail_view(request, slug):
+    room = get_object_or_404(Room, slug=slug)
+    photos = RoomImage.objects.filter(post=post)
+    return render(request, 'room_detail_1.html', {
+        'room':room,
+        'photos':photos
+    })

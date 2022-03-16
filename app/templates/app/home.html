@@ -272,6 +272,7 @@
                 <div class="our-room-show">
                     <div class="row">
                         <div class="carousel-list">
+                            {% for room in rooms %}
                             <div class="col-md-4">
                                 <div class="single-room">
                                     <div class="room-img">
@@ -279,7 +280,8 @@
                                     </div>
                                     <div class="room-desc">
                                         <div class="room-name">
-                                            <h3><a href="#">Delux room</a></h3>
+                                            <!-- <h3><a href="#">Delux room</a></h3> -->
+                                            <h3><a href="#">{{ room.category }}</a></h3>
                                         </div>
                                         <div class="room-rent">
                                             <h5>€ 200 / <span>Night</span></h5>
@@ -290,6 +292,7 @@
                                     </div>
                                 </div>
                             </div>
+                            {% endfor %}
                             <div class="col-md-4">
                                 <div class="single-room">
                                     <div class="room-img">

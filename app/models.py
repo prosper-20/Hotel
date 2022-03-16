@@ -15,8 +15,9 @@ class Room(models.Model):
     beds = models.IntegerField()
     capacity = models.IntegerField()
     image = models.ImageField()
+    price = models.IntegerField()
 
 
     def __str__(self):
-        return f"{self.number} - {self.name}"
+        return f"{self.number} - {self.category}"
 

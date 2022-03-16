@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
+from django.urls import reverse
 
 
 class Category(models.Model):
@@ -22,6 +23,11 @@ class Room(models.Model):
 
     def __str__(self):
         return f"{self.number} - {self.category}"
+
+    def get_absolute_url(self):
+        return reverse("room_detail", kwargs={
+            'slug': self.slug
+        })
 
 
     def save(self, *args, **kwargs): # < here

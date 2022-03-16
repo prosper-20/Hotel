@@ -1,14 +1,14 @@
 from django.contrib import admin
 from .models import Category, Room, RoomImage
 
+admin.site.register(Category)
+
 class RoomImageAdmin(admin.StackedInline):
     model = RoomImage
 
 
 
-
-admin.site.register(Category)
-@admin.site.register(Room)
+@admin.register(Room)
 class RoomAdmin(admin.ModelAdmin):
     inlines = [RoomImageAdmin]
 

@@ -36,7 +36,7 @@
     <div class="container">
 
       <!-- Brand -->
-      <a class="navbar-brand waves-effect" href="{% url 'home' %}" target="_blank">
+      <a class="navbar-brand waves-effect" href="{% url 'home' %}" target="_top">
         <strong class="blue-text">P's Suites</strong>
       </a>
 
@@ -223,24 +223,6 @@
       <img src="{{ p.images.url }}" class="img-fluid mx-auto d-block" alt="img2">
     </div>
     {% endfor%}
-    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/Moimoi-stewed-turkey-white-rice-and-rice-sauce-600x400.jpg" class="img-fluid mx-auto d-block" alt="img3">
-    </div>
-    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/Ofada-rice-with-assorted-ofada-sauce-and-diced-plantain-600x400.jpg" class="img-fluid mx-auto d-block" alt="img4">
-    </div>
-    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/Pounded-yam-and-equsi-with-cowleg-and-snail-600x400_0sfvJdH.jpg" class="img-fluid mx-auto d-block" alt="img5">
-    </div>
-    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/iStock-576711118_0.jpg" class="img-fluid mx-auto d-block" alt="img6">
-    </div>
-    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/istockphoto-1300482641-170667a.jpg" class="img-fluid mx-auto d-block" alt="img7">
-    </div>
-    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/photo-1625862220431-f8d70c6addda.jfif" class="img-fluid mx-auto d-block" alt="img8">
-    </div>
       </div>
       <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -328,7 +310,7 @@
     <!--Copyright-->
     <div class="footer-copyright py-3">
       © 2022 Copyright:
-      <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank">P's Suites</a>
+      <a href="{% url 'home' %}" target="_top">P's Suites</a>
     </div>
     <!--/.Copyright-->
 

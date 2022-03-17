@@ -1,6 +1,6 @@
 from typing import List
 from django.shortcuts import render, get_object_or_404
-from .models import Room, RoomImage
+from .models import Room, RoomImage, Staff
 from django.views.generic import ListView, DetailView
 
 
@@ -16,6 +16,7 @@ class HomeView(ListView):
     model = Room
     template_name = 'app/home.html'
     context_object_name = "rooms"
+    extra_context={'staffs': Staff.objects.all()}
 
 class RoomDetailView(DetailView):
     model = Room

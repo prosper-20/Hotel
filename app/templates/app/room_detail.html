@@ -210,97 +210,82 @@
 
         </div> -->
         <!--Grid column-->
-         <!-- Top content -->
-      <div class="top-content">
-        <div class="container-fluid">
-          <div id="carousel-example" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
-            <img src="{{room.image.url}}" class="img-fluid mx-auto d-block" alt="img1">
-          </div>
-          {% for p in photos %}
-          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-            <!-- <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/Fufu-afang-boiled-croaker-and-fried-goat-meat-600x400_y4sbvdJ.jpg" class="img-fluid mx-auto d-block" alt="img2"> -->
-            <img src="{{p.images.url}}" class="img-fluid mx-auto d-block" alt="img2">
-          </div>
-          {% endfor %}
-          
-          <!-- <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/Moimoi-stewed-turkey-white-rice-and-rice-sauce-600x400.jpg" class="img-fluid mx-auto d-block" alt="img3">
-          </div>
-          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/Ofada-rice-with-assorted-ofada-sauce-and-diced-plantain-600x400.jpg" class="img-fluid mx-auto d-block" alt="img4">
-          </div>
-          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/Pounded-yam-and-equsi-with-cowleg-and-snail-600x400_0sfvJdH.jpg" class="img-fluid mx-auto d-block" alt="img5">
-          </div>
-          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/iStock-576711118_0.jpg" class="img-fluid mx-auto d-block" alt="img6">
-          </div>
-          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/istockphoto-1300482641-170667a.jpg" class="img-fluid mx-auto d-block" alt="img7">
-          </div>
-          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/photo-1625862220431-f8d70c6addda.jfif" class="img-fluid mx-auto d-block" alt="img8">
-          </div> -->
-            </div>
-            <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-          </div>
-        </div>
-      </div>
-
-      <!--Grid row-->
-
-      <!--Grid row-->
-     
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <!-- <div class="col-lg-4 col-md-6 mb-4">
-
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/12.jpg" class="img-fluid" alt="">
-
-        </div> -->
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <!-- <div class="col-lg-4 col-md-6 mb-4">
-
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/13.jpg" class="img-fluid" alt="">
-
-        </div> -->
-        <!--Grid column-->
-
-      </div>
-      <!--Grid row-->
-
+<!-- Top content -->
+<div class="top-content">
+  <div class="container-fluid">
+    <div id="carousel-example" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner row w-100 mx-auto" role="listbox">
+          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+      <img src="{{ room.image.url }}" class="img-fluid mx-auto d-block" alt="img1">
     </div>
-  </main>
-  <!--Main layout-->
+    {% for p in photos %}
+    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="{{ p.images.url }}" class="img-fluid mx-auto d-block" alt="img2">
+    </div>
+    {% endfor%}
+    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/Moimoi-stewed-turkey-white-rice-and-rice-sauce-600x400.jpg" class="img-fluid mx-auto d-block" alt="img3">
+    </div>
+    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/Ofada-rice-with-assorted-ofada-sauce-and-diced-plantain-600x400.jpg" class="img-fluid mx-auto d-block" alt="img4">
+    </div>
+    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/Pounded-yam-and-equsi-with-cowleg-and-snail-600x400_0sfvJdH.jpg" class="img-fluid mx-auto d-block" alt="img5">
+    </div>
+    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/iStock-576711118_0.jpg" class="img-fluid mx-auto d-block" alt="img6">
+    </div>
+    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/istockphoto-1300482641-170667a.jpg" class="img-fluid mx-auto d-block" alt="img7">
+    </div>
+    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/photo-1625862220431-f8d70c6addda.jfif" class="img-fluid mx-auto d-block" alt="img8">
+    </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+    </div>
+  </div>
+</div>
+
+<!--Grid row-->
+
+<!--Grid row-->
+
+  <!--Grid column-->
+
+  <!--Grid column-->
+  <!-- <div class="col-lg-4 col-md-6 mb-4">
+
+    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/12.jpg" class="img-fluid" alt="">
+
+  </div> -->
+  <!--Grid column-->
+
+  <!--Grid column-->
+  <!-- <div class="col-lg-4 col-md-6 mb-4">
+
+    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/13.jpg" class="img-fluid" alt="">
+
+  </div> -->
+  <!--Grid column-->
+
+</div>
+<!--Grid row-->
+
+</div>
+</main>
+<!--Main layout-->
 
 
   <!--Footer-->
   <footer class="page-footer text-center font-small mt-4 wow fadeIn">
-
-    <!--Call to action-->
-    <div class="pt-4">
-      <a class="btn btn-outline-white" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" target="_blank"
-        role="button">Download MDB
-        <i class="fas fa-download ml-2"></i>
-      </a>
-      <a class="btn btn-outline-white" href="https://mdbootstrap.com/education/bootstrap/" target="_blank" role="button">Start
-        free tutorial
-        <i class="fas fa-graduation-cap ml-2"></i>
-      </a>
-    </div>
-    <!--/.Call to action-->
 
     <hr class="my-4">
 
@@ -342,8 +327,8 @@
 
     <!--Copyright-->
     <div class="footer-copyright py-3">
-      © 2019 Copyright:
-      <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> MDBootstrap.com </a>
+      © 2022 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank">P's Suites</a>
     </div>
     <!--/.Copyright-->
 

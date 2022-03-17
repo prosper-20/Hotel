@@ -42,3 +42,11 @@ class RoomImage(models.Model):
     def __str__(self):
         return self.room.description
 
+class Staff(models.Model):
+    name = models.CharField(max_length=100)
+    job = models.CharField(max_length=100)
+    image = models.ImageField()
+
+    def __str__(self):
+        return f"{self.name} - {self.job}"
+

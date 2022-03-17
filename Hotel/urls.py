@@ -18,10 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from blog import views
+from blog.views import Home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("app.urls"))
+    path("", include("app.urls")),
+    path("blog/", include("blog.urls") )
     
 ]
 

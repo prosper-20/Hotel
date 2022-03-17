@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Material Design Bootstrap</title>
+  <title>P's Suites | Detail</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -36,8 +36,8 @@
     <div class="container">
 
       <!-- Brand -->
-      <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
-        <strong class="blue-text">MDB</strong>
+      <a class="navbar-brand waves-effect" href="{% url 'home' %}" target="_blank">
+        <strong class="blue-text">P's Suites</strong>
       </a>
 
       <!-- Collapse -->
@@ -52,11 +52,11 @@
         <!-- Left -->
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link waves-effect" href="#">Home
+            <a class="nav-link waves-effect" href="#">Detail
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link waves-effect" href="https://mdbootstrap.com/docs/jquery/" target="_blank">About MDB</a>
           </li>
           <li class="nav-item">
@@ -66,7 +66,7 @@
           <li class="nav-item">
             <a class="nav-link waves-effect" href="https://mdbootstrap.com/education/bootstrap/" target="_blank">Free
               tutorials</a>
-          </li>
+          </li> -->
         </ul>
 
         <!-- Right -->
@@ -88,12 +88,12 @@
               <i class="fab fa-twitter"></i>
             </a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link border border-light rounded waves-effect"
               target="_blank">
               <i class="fab fa-github mr-2"></i>MDB GitHub
             </a>
-          </li>
+          </li> -->
         </ul>
 
       </div>
@@ -224,6 +224,7 @@
             <img src="{{p.images.url}}" class="img-fluid mx-auto d-block" alt="img2">
           </div>
           {% endfor %}
+          
           <!-- <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
             <img src="https://prosper-django-bucket.s3.us-east-2.amazonaws.com/Carousel+Uploads/Moimoi-stewed-turkey-white-rice-and-rice-sauce-600x400.jpg" class="img-fluid mx-auto d-block" alt="img3">
           </div>

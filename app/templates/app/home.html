@@ -858,12 +858,13 @@
                 </div>
                 <div class="news-list">
                     <div class="row">
+                        {% for post in posts %}
                         <div class="col-md-12 pb-80">
                             <div class="news-inner">
                                 <div class="news-img">
-                                    <img src="https://www.parkgrandlancastergate.co.uk/blog/wp-content/uploads/2019/06/london-at-night.jpg" alt="">
+                                    <img src="{{ post.image.url }}" alt="">
                                     <div class="news-post">
-                                        <div class="n-date">15 June 2015</div>
+                                        <div class="n-date">{{ post.date_posted }}</div>
                                         <a href="#" class="comment"><span><i class="mdi mdi-comment-processing-outline"></i></span> 20</a>
                                         <div class="news-views">
                                             <a href="#"><span><i class="mdi mdi-heart"></i></span>40</a>
@@ -871,9 +872,9 @@
                                     </div>
                                 </div>
                                 <div class="news-desc">
-                                    <h3 class="news-title"><a href="#">Best Things to Do In London Enjoy Your life
+                                    <h3 class="news-title"><a href="#">{{ post.title }}
     the Night life.</a> </h3>
-                                    <p class="news_desc">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of tystem, and expound the actual teachings of the great explorer of the truth, the master-builder uman happiness. No one rejects, dislikes, or avoids pleasure itself, because it</p>
+                                    <p class="news_desc">{{ post.content }}</p>
                                     <div class="news-action">
                                         <div class="read-more">
                                             <a href="#">Read more</a>
@@ -889,7 +890,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12 pb-80">
+                        <!-- <div class="col-md-12 pb-80">
                             <div class="news-inner">
                                 <div class="news-img">
                                     <img src="https://cdn.londonandpartners.com/asset/london-by-night-open-top-bus-tour_london-by-night-open-top-bus-tour-image-courtesy-of-golden-tours_a78a06aa1761ee29c3c3c7bcff4d1939.jpg" alt="">
@@ -920,7 +921,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
+                        {% endfor %}
                     </div>
                 </div>
             </div>

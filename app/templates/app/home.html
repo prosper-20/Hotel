@@ -607,20 +607,20 @@
                                     </div>
                                 </div>
                             </div>
-                            {% for staff in staffs%}
+                            {% for staff in staffs %}
                             <div class="col-md-4">
                                 <div class="single-staff">
                                     <div class="sraff-inner">
-                                        <img src="{% static 'app/images/staff/staff3.jpg' %}" alt="">
+                                        <img src="{{ staff.image.url }}" alt="">
                                         <div class="staff-title">
                                             <span class="plus"></span>
-                                            <h2>Soleman</h2>
-                                            <h5>hotel staff</h5>
+                                            <h2>{{ staff.name }}</h2>
+                                            <h5>{{ staff.job }}</h5>
 
                                         </div>
                                         <div class="staff-hover-desc">
-                                            <h2>Soleman</h2>
-                                            <h5>hotel staff</h5>
+                                            <h2>{{ staff.name }}</h2>
+                                            <h5>{{ staff.job }}</h5>
                                             <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr.</p>
                                             <div class="scoial_icons">
                                                 <a href="#"><i class="mdi mdi-facebook"></i></a>
@@ -632,6 +632,7 @@
                                     </div>
                                 </div>
                             </div>
+                            {% endfor %}
                             <div class="col-md-4">
                                 <div class="single-staff">
                                     <div class="sraff-inner">
@@ -827,19 +828,19 @@
             </div>
             <div class="our-gallery-photo">
                 <div class="single-gallery">
-                    <img src="{% static 'app/images/gallery/g-1.jpg' %}" alt="">
+                    <img src="https://media.radissonhotels.net/image/radisson-blu-hotel-lagos-ikeja/restaurant/16256-116550-f64524748_3xl.jpg?impolicy=CustomCrop&cwidth=800&cheight=610" alt="">
                 </div>
                 <div class="single-gallery">
-                    <img src="{% static 'app/images/gallery/g-2.jpg' %}" alt="">
+                    <img src="https://media.radissonhotels.net/image/radisson-blu-hotel-lagos-ikeja/pooloutdoor/16256-116550-f63888592_3xl.jpg?impolicy=CustomCrop&cwidth=800&cheight=610" alt="">
                 </div>
                 <div class="single-gallery">
-                    <img src="{% static 'app/images/gallery/g-5.jpg' %}" alt="">
+                    <img src="https://media.radissonhotels.net/image/radisson-blu-hotel-lagos-ikeja/lobbyview/16256-116550-f63888506_3xl.jpg?impolicy=CustomCrop&cwidth=800&cheight=610" alt="">
                 </div>
                 <div class="single-gallery">
-                    <img src="{% static 'app/images/gallery/g-4.jpg' %}" alt="">
+                    <img src="https://media.radissonhotels.net/image/radisson-blu-hotel-lagos-ikeja/pooloutdoor/16256-116550-f63888590_3xl.jpg?impolicy=CustomCrop&cwidth=800&cheight=610" alt="">
                 </div>
                 <div class="single-gallery">
-                    <img src="{% static 'app/images/gallery/g-5.jpg' %}" alt="">
+                    <img src="https://media.radissonhotels.net/image/radisson-blu-hotel-lagos-ikeja/meetingroom/16256-116550-f63888594_3xl.jpg?impolicy=CustomCrop&cwidth=800&cheight=610" alt="">
                 </div>
             </div>
         </div>
@@ -860,7 +861,7 @@
                         <div class="col-md-12 pb-80">
                             <div class="news-inner">
                                 <div class="news-img">
-                                    <img src="{% static 'app/images/news/n-1.jpg' %}" alt="">
+                                    <img src="https://www.parkgrandlancastergate.co.uk/blog/wp-content/uploads/2019/06/london-at-night.jpg" alt="">
                                     <div class="news-post">
                                         <div class="n-date">15 June 2015</div>
                                         <a href="#" class="comment"><span><i class="mdi mdi-comment-processing-outline"></i></span> 20</a>
@@ -891,7 +892,7 @@
                         <div class="col-md-12 pb-80">
                             <div class="news-inner">
                                 <div class="news-img">
-                                    <img src="{% static 'app/images/news/n-2.jpg' %}" alt="">
+                                    <img src="https://cdn.londonandpartners.com/asset/london-by-night-open-top-bus-tour_london-by-night-open-top-bus-tour-image-courtesy-of-golden-tours_a78a06aa1761ee29c3c3c7bcff4d1939.jpg" alt="">
                                     <div class="news-post">
                                         <div class="n-date">15 June 2015</div>
                                         <a href="#" class="comment"><span><i class="mdi mdi-comment-processing-outline"></i></span> 20</a>

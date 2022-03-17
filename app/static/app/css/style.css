@@ -985,7 +985,7 @@ p.welcome-desc {
 	11. Our gallery Css here
 ---------------------*/
 .our-gallery .single-gallery::before {
-    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+    background: rgba(50, 50, 50, 0.8) none repeat scroll 0 0;
     content: "";
     height: 100%;
     position: absolute;
@@ -1137,7 +1137,8 @@ h3.news-title {
   width: 25%;
 }
 .hotel-cmmunities {
-  background: rgba(0, 0, 0, 0) url("images/bg/communities.jpg") no-repeat scroll center center / cover ;
+  /* background: rgba(0, 0, 0, 0) url("images/bg/communities.jpg") no-repeat scroll center center / cover ; */
+  background: rgba(0, 0, 0, 0) url("https://www.yourtango.com/sites/default/files/image_blog/things-genuinely-happy-people-know.jpg") no-repeat scroll center center / cover ;
   position: relative;
 }
 .hotel-cmmunities.style2{

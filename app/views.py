@@ -30,3 +30,6 @@ def detail_view(request, slug):
         'room':room,
         'photos':photos
     })
+
+def contact(request):
+    return render(request, "app/contact-us.html")

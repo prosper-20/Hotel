@@ -7,5 +7,5 @@ urlpatterns = [
     path('room/<slug:slug>/', views.detail_view, name='detail'),
     path("contact/", views.contact, name="contact"),
     path("about/", views.about, name="about"),
-    path('search/', views.search_posts, name="search_rooms"),
+    path('search/', views.search_rooms, name="search_rooms"),
 ]

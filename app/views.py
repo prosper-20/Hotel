@@ -41,11 +41,11 @@ def about(request):
     return render(request, "app/about-us.html", context)
 
 
-def search_posts(request):
+def search_rooms(request):
     if request.method == "POST":
         searched = request.POST['searched']
         # This returns the results of the user's search
-        rooms = Room.objects.filter(title__contains=searched)
-        return render(request, "order/new_search_posts.html", {'searched': searched, 'rooms': rooms})
+        rooms = Room.objects.filter(slug__contains=searched)
+        return render(request, "app/rooms_search.html", {'searched': searched, 'rooms': rooms})
     else:
-        return render(request, "order/new_search_posts.html")
+        return render(request, "app/rooms_search.html")

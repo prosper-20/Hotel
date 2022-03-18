@@ -8,30 +8,30 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="{% static 'app/images/apple-touch-icon.png" type="images/x-icon" rel="shortcut icon">
+    <link href="{% static 'app/images/apple-touch-icon.png' %}" type="images/x-icon" rel="shortcut icon">
     <!-- Place favicon.ico in the root directory -->
     
     <!-- All css files are included here. -->
     <!-- Bootstrap fremwork main css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'app/css/bootstrap.min.css' %}">
     <!-- This core.css file contents all plugings css file. -->
-    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="{% static 'app/css/core.css' %}">
     <!-- Theme shortcodes/elements style -->
-    <link rel="stylesheet" href="css/shortcode/shortcodes.css">
+    <link rel="stylesheet" href="{% static 'app/css/shortcode/shortcodes.css' %]">
     <!-- Theme main style -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'app/style.css' %}">
     <!-- Responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{static 'app/css/responsive.css' %}">
     <!-- customizer style css -->
-    <link rel="stylesheet" href="css/style-customizer.css">
+    <link rel="stylesheet" href="{% static 'app/css/style-customizer.css' %}">
     <link href="#" data-style="styles" rel="stylesheet">
     
     <!-- User style -->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="[% static 'app/css/custom.css' %}">
 
 
     <!-- Modernizr JS -->
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="{% static 'app/js/vendor/modernizr-2.8.3.min.js' %}"></script>
 </head>
 
 <body>
@@ -61,17 +61,17 @@
                             <div class="row">
                                 <div class="col-md-2 col-sm-2 col-xs-12">
                                     <div class="logo mt-15">
-                                        <a href="index.html"><img src="images/logo/logo.png" alt=""></a>
+                                        <a href="index.html"><img src="{% static 'app/images/logo/new_logo.png' %}" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="col-md-10 col-sm-10 hidden-xs">
                                     <div class="header-top ptb-10">
                                         <div class="adresses">
                                             <div class="phone">
-                                                <p>call <span>+012 345 678 102 </span></p>
+                                                <p>call <span>+234 9036356792</span></p>
                                             </div>
                                             <div class="email">
-                                                <p>Email: <span>info@example.com</span></p>
+                                                <p>Email: <span>edwardprosper001@gmail.com</span></p>
                                             </div>
                                         </div>
                                         <div class="social-links">
@@ -230,19 +230,19 @@
                                 <div class="phone mb-15">
                                     <p>
                                         <span><i class="mdi mdi-phone"></i></span>
-                                        <span class="desc">+012 345 678 102 </span>
+                                        <span class="desc">+234 9036356792 </span>
                                     </p>
                                 </div>
                                 <div class="mail mb-15">
                                     <p>
                                     <span><i class="mdi mdi-email"></i></span>
-                                    <span class="desc">info@example.com</span>
+                                    <span class="desc">P's.suites@gmail.com</span>
                                     </p>
                                 </div>
                                 <div class="addresses">
                                     <p>
                                         <span><i class="mdi mdi-map-marker"></i></span>
-                                        <span class="desc">House 09, Road 32, Mohammadpur,<br>Dhaka-1200, UK</span>
+                                        <span class="desc">10 Obe Street, Off Ajao Road<br>Ikeja, Lagos.</span>
                                     </p>
                                 </div>
                             </div>
@@ -306,14 +306,14 @@
                     <div class="col-md-3 col-sm-4 col-xs-6">
                         <div class="single-footer mt-0">
                             <div class="logo">
-                                <img src="images/logo/logo.png" alt="">
+                                <img src="{% static 'app/images/logo/new_logo.png' %}" alt="">
                             </div>
                             <div class="f-adress">
-                                <p><span>Address:</span> ur address goes here,street Crossroad123.</p>
+                                <p><span>Address:</span>10 Obe Street, Off Ajao Road, Ikeja, Lagos.</p>
                             </div>
                             <div class="hotel-contact">
-                                <p><span>phone:</span> 99 55 88586 5478.</p>
-                                <p><span>Email:</span>info@example.com</p>
+                                <p><span>Phone:</span>09036356792</p>
+                                <p><span>Email:</span>P's.suites.com</p>
                             </div>
                         </div>
                     </div>
@@ -352,22 +352,22 @@
                             <h3>instagram</h3>
                             <div class="instagram-post">
                                 <div class="single-post">
-                                    <a href="#"><img src="images/instagram/ins-1.jpg" alt=""></a>
+                                    <a href="#"><img src="{% static 'app/images/instagram/ins-1.jpg' %}" alt=""></a>
                                 </div>
                                 <div class="single-post">
-                                    <a href="#"><img src="images/instagram/ins-2.jpg" alt=""></a>
+                                    <a href="#"><img src="{% static 'app/images/instagram/ins-2.jpg' %}" alt=""></a>
                                 </div>
                                 <div class="single-post">
-                                    <a href="#"><img src="images/instagram/ins-3.jpg" alt=""></a>
+                                    <a href="#"><img src="{% static 'app/images/instagram/ins-3.jpg' %}" alt=""></a>
                                 </div>
                                 <div class="single-post">
-                                    <a href="#"><img src="images/instagram/ins-4.jpg" alt=""></a>
+                                    <a href="#"><img src="{% static 'app/images/instagram/ins-4.jpg' %}" alt=""></a>
                                 </div>
                                 <div class="single-post">
-                                    <a href="#"><img src="images/instagram/ins-5.jpg" alt=""></a>
+                                    <a href="#"><img src="{% static 'app/images/instagram/ins-5.jpg' %}" alt=""></a>
                                 </div>
                                 <div class="single-post">
-                                    <a href="#"><img src="images/instagram/img-6.jpg" alt=""></a>
+                                    <a href="#"><img src="{% static 'app/images/instagram/ins-1.jpg' %}" alt=""></a>
                                 </div>
                             </div>
                         </div>

@@ -46,6 +46,7 @@ def search_rooms(request):
         searched = request.POST['searched']
         # This returns the results of the user's search
         rooms = Room.objects.filter(slug__contains=searched)
-        return render(request, "app/rooms_search.html", {'searched': searched, 'rooms': rooms})
+        # return render(request, "app/rooms_search.html", {'searched': searched, 'rooms': rooms})
+        return render(request, "app/search_rooms.html", {'searched': searched, 'rooms': rooms})
     else:
-        return render(request, "app/rooms_search.html")
+        return render(request, "app/search_rooms.html")

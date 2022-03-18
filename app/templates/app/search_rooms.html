@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -211,7 +212,177 @@
                     <div class="row">
                         <div class="our-room-list owl-pagination">
                             <div class="single-room-sapce">
-                                <div class="col-md-4 col-sm-6 col-xs-12 col-sm-6 col-xs-12">
+                                <!-- <div class="col-md-4 col-sm-6 col-xs-12 col-sm-6 col-xs-12">
+                                    <div class="single-room mb-80">
+                                        <div class="room-img">
+                                            <a href="#"><img src="images/room/room1.jpg" alt=""></a>
+                                        </div>
+                                        <div class="room-desc">
+                                            <div class="room-name">
+                                                <h3><a href="#">Delux room</a></h3>
+                                            </div>
+                                            <div class="room-rent">
+                                                <h5>€ 200 / <span>Night</span></h5>
+                                            </div>
+                                            <div class="room-book">
+                                                <a href="#">Book now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="single-room mb-80">
+                                        <div class="room-img">
+                                            <a href="#"><img src="images/room/room2.jpg" alt=""></a>
+                                        </div>
+                                        <div class="room-desc">
+                                            <div class="room-name">
+                                                <h3><a href="#">Delux room</a></h3>
+                                            </div>
+                                            <div class="room-rent">
+                                                <h5>€ 200 / <span>Night</span></h5>
+                                            </div>
+                                            <div class="room-book">
+                                                <a href="#">Book now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                {% if searched %}
+                                {% for room in rooms %}
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="single-room mb-80">
+                                        <div class="room-img">
+                                            <a href="#"><img src="{{ room.image.url }}" alt=""></a>
+                                        </div>
+                                        <div class="room-desc">
+                                            <div class="room-name">
+                                                <h3><a href="#">{{ room.category }}</a></h3>
+                                            </div>
+                                            <div class="room-rent">
+                                                <h5>€ {{ room.price }} / <span>Night</span></h5>
+                                            </div>
+                                            <div class="room-book">
+                                                <a href="#">Book now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                {% else %}
+                                <h3>Oops.... Search returned 0 results</h3>
+                                {% endif %}
+                                <!-- <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="single-room mb-80">
+                                        <div class="room-img">
+                                            <a href="#"><img src="images/room/room1.jpg" alt=""></a>
+                                        </div>
+                                        <div class="room-desc">
+                                            <div class="room-name">
+                                                <h3><a href="#">Delux room</a></h3>
+                                            </div>
+                                            <div class="room-rent">
+                                                <h5>€ 200 / <span>Night</span></h5>
+                                            </div>
+                                            <div class="room-book">
+                                                <a href="#">Book now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="single-room mb-80">
+                                        <div class="room-img">
+                                            <a href="#"><img src="images/room/room2.jpg" alt=""></a>
+                                        </div>
+                                        <div class="room-desc">
+                                            <div class="room-name">
+                                                <h3><a href="#">Delux room</a></h3>
+                                            </div>
+                                            <div class="room-rent">
+                                                <h5>€ 200 / <span>Night</span></h5>
+                                            </div>
+                                            <div class="room-book">
+                                                <a href="#">Book now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="single-room mb-80">
+                                        <div class="room-img">
+                                            <a href="#"><img src="images/room/room3.jpg" alt=""></a>
+                                        </div>
+                                        <div class="room-desc">
+                                            <div class="room-name">
+                                                <h3><a href="#">Delux room</a></h3>
+                                            </div>
+                                            <div class="room-rent">
+                                                <h5>€ 200 / <span>Night</span></h5>
+                                            </div>
+                                            <div class="room-book">
+                                                <a href="#">Book now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="single-room">
+                                        <div class="room-img">
+                                            <a href="#"><img src="images/room/room1.jpg" alt=""></a>
+                                        </div>
+                                        <div class="room-desc">
+                                            <div class="room-name">
+                                                <h3><a href="#">Delux room</a></h3>
+                                            </div>
+                                            <div class="room-rent">
+                                                <h5>€ 200 / <span>Night</span></h5>
+                                            </div>
+                                            <div class="room-book">
+                                                <a href="#">Book now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="single-room">
+                                        <div class="room-img">
+                                            <a href="#"><img src="images/room/room2.jpg" alt=""></a>
+                                        </div>
+                                        <div class="room-desc">
+                                            <div class="room-name">
+                                                <h3><a href="#">Delux room</a></h3>
+                                            </div>
+                                            <div class="room-rent">
+                                                <h5>€ 200 / <span>Night</span></h5>
+                                            </div>
+                                            <div class="room-book">
+                                                <a href="#">Book now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 hidden-sm col-xs-12">
+                                    <div class="single-room">
+                                        <div class="room-img">
+                                            <a href="#"><img src="images/room/room3.jpg" alt=""></a>
+                                        </div>
+                                        <div class="room-desc">
+                                            <div class="room-name">
+                                                <h3><a href="#">Delux room</a></h3>
+                                            </div>
+                                            <div class="room-rent">
+                                                <h5>€ 200 / <span>Night</span></h5>
+                                            </div>
+                                            <div class="room-book">
+                                                <a href="#">Book now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-room-sapce">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="single-room mb-80">
                                         <div class="room-img">
                                             <a href="#"><img src="images/room/room1.jpg" alt=""></a>
@@ -536,171 +707,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="single-room-sapce">
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="single-room mb-80">
-                                        <div class="room-img">
-                                            <a href="#"><img src="images/room/room1.jpg" alt=""></a>
-                                        </div>
-                                        <div class="room-desc">
-                                            <div class="room-name">
-                                                <h3><a href="#">Delux room</a></h3>
-                                            </div>
-                                            <div class="room-rent">
-                                                <h5>€ 200 / <span>Night</span></h5>
-                                            </div>
-                                            <div class="room-book">
-                                                <a href="#">Book now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="single-room mb-80">
-                                        <div class="room-img">
-                                            <a href="#"><img src="images/room/room2.jpg" alt=""></a>
-                                        </div>
-                                        <div class="room-desc">
-                                            <div class="room-name">
-                                                <h3><a href="#">Delux room</a></h3>
-                                            </div>
-                                            <div class="room-rent">
-                                                <h5>€ 200 / <span>Night</span></h5>
-                                            </div>
-                                            <div class="room-book">
-                                                <a href="#">Book now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="single-room mb-80">
-                                        <div class="room-img">
-                                            <a href="#"><img src="images/room/room3.jpg" alt=""></a>
-                                        </div>
-                                        <div class="room-desc">
-                                            <div class="room-name">
-                                                <h3><a href="#">Delux room</a></h3>
-                                            </div>
-                                            <div class="room-rent">
-                                                <h5>€ 200 / <span>Night</span></h5>
-                                            </div>
-                                            <div class="room-book">
-                                                <a href="#">Book now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="single-room mb-80">
-                                        <div class="room-img">
-                                            <a href="#"><img src="images/room/room1.jpg" alt=""></a>
-                                        </div>
-                                        <div class="room-desc">
-                                            <div class="room-name">
-                                                <h3><a href="#">Delux room</a></h3>
-                                            </div>
-                                            <div class="room-rent">
-                                                <h5>€ 200 / <span>Night</span></h5>
-                                            </div>
-                                            <div class="room-book">
-                                                <a href="#">Book now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="single-room mb-80">
-                                        <div class="room-img">
-                                            <a href="#"><img src="images/room/room2.jpg" alt=""></a>
-                                        </div>
-                                        <div class="room-desc">
-                                            <div class="room-name">
-                                                <h3><a href="#">Delux room</a></h3>
-                                            </div>
-                                            <div class="room-rent">
-                                                <h5>€ 200 / <span>Night</span></h5>
-                                            </div>
-                                            <div class="room-book">
-                                                <a href="#">Book now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="single-room mb-80">
-                                        <div class="room-img">
-                                            <a href="#"><img src="images/room/room3.jpg" alt=""></a>
-                                        </div>
-                                        <div class="room-desc">
-                                            <div class="room-name">
-                                                <h3><a href="#">Delux room</a></h3>
-                                            </div>
-                                            <div class="room-rent">
-                                                <h5>€ 200 / <span>Night</span></h5>
-                                            </div>
-                                            <div class="room-book">
-                                                <a href="#">Book now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="single-room">
-                                        <div class="room-img">
-                                            <a href="#"><img src="images/room/room1.jpg" alt=""></a>
-                                        </div>
-                                        <div class="room-desc">
-                                            <div class="room-name">
-                                                <h3><a href="#">Delux room</a></h3>
-                                            </div>
-                                            <div class="room-rent">
-                                                <h5>€ 200 / <span>Night</span></h5>
-                                            </div>
-                                            <div class="room-book">
-                                                <a href="#">Book now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="single-room">
-                                        <div class="room-img">
-                                            <a href="#"><img src="images/room/room2.jpg" alt=""></a>
-                                        </div>
-                                        <div class="room-desc">
-                                            <div class="room-name">
-                                                <h3><a href="#">Delux room</a></h3>
-                                            </div>
-                                            <div class="room-rent">
-                                                <h5>€ 200 / <span>Night</span></h5>
-                                            </div>
-                                            <div class="room-book">
-                                                <a href="#">Book now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 hidden-sm col-xs-12">
-                                    <div class="single-room">
-                                        <div class="room-img">
-                                            <a href="#"><img src="images/room/room3.jpg" alt=""></a>
-                                        </div>
-                                        <div class="room-desc">
-                                            <div class="room-name">
-                                                <h3><a href="#">Delux room</a></h3>
-                                            </div>
-                                            <div class="room-rent">
-                                                <h5>€ 200 / <span>Night</span></h5>
-                                            </div>
-                                            <div class="room-book">
-                                                <a href="#">Book now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

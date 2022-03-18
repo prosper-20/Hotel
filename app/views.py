@@ -36,4 +36,6 @@ def contact(request):
 
 
 def about(request):
-    return render(request, "app/about-us.html")
+    staff = Staff.objects.all()
+    context = {"staff": staff}
+    return render(request, "app/about-us.html", context)

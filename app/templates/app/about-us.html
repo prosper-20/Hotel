@@ -73,7 +73,7 @@
                                                 <p>Call: <span>+234 9036356792</span></p>
                                             </div>
                                             <div class="email">
-                                                <p>Email: <span>edwardprosper001@gmail.com</span></p>
+                                                <p>Email: <span>P's.suites@gmail.com</span></p>
                                             </div>
                                         </div>
                                         <div class="social-links">
@@ -201,16 +201,16 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="section-title mb-80">
-                            <h2>About <span>Chondo</span></h2>
+                            <h2>About <span>P's Suites</span></h2>
                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered by injected humour.</p>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="about-chondo">
                             <div class="about-member">
-                                <img src="images/about.jpg" alt="">
-                                <h3>Mohin patwary</h3>
-                                <h5 class="mb-0">hrd head</h5>
+                                <img src="https://www.business.com/images/content/5f1/ad47c5a215e1f668b4567/381-451-" alt="">
+                                <h3>Edward Prosper</h3>
+                                <h5 class="mb-0">Managing Director</h5>
                             </div>
                         </div>
                     </div>
@@ -257,7 +257,7 @@
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="feature-desc text-left">
                             <div class="section-title mb-30">
-                                <h2>Feature <span>chondo</span></h2>
+                                <h2>Feature <span>P's Suite</span></h2>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected huor randomised words which don't look even slightly believable. If you are going to useassage of Lorem Ipsum, you need to be sure thereng en in the middle of text</p>
                             </div>
                             <div class="feature-item">
@@ -284,20 +284,20 @@
                                 <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="feature1">
                                 <div class="feature-tab-inner">
-                                    <img src="images/services/services6.jpg" alt="">
+                                    <img src="{% static 'app/images/services/services6.jpg' %}" alt="">
                                 </div>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="feature2">
                                 <div class="feature-tab-inner">
-                                    <img src="images/services/services7.jpg" alt="">
+                                    <img src="{% static 'app/images/services/services7.jpg' %}" alt="">
                                 </div>
                             </div>
                         </div>
                             </div>
                             <div class="feature-tab-item">
                                 <ul class="nav" role="tablist">
-                                    <li class="active"><a href="#feature1" data-toggle="tab"><img src="images/services/tab-1.jpg" alt=""></a></li>
-                                    <li><a href="#feature2" data-toggle="tab"><img src="images/services/tab-2.jpg" alt=""></a></li>
+                                    <li class="active"><a href="#feature1" data-toggle="tab"><img src="{% static 'app/images/services/tab-1.jpg' %}" alt=""></a></li>
+                                    <li><a href="#feature2" data-toggle="tab"><img src="{% static 'app/images/services/tab-2.jpg' %}" alt=""></a></li>
 
                                 </ul>
                             </div>
@@ -321,10 +321,36 @@
                 <div class="staff-list">
                     <div class="row">
                         <div class="carousel-list">
+                            {% for staff in staffs %}
                             <div class="col-md-4">
                                 <div class="single-staff">
                                     <div class="sraff-inner">
-                                        <img src="images/staff/staff1.jpg" alt="">
+                                        <img src="{{ staff.image.url }}" alt="">
+                                        <div class="staff-title">
+                                            <span class="plus"></span>
+                                            <h2>{{ staff.name }}</h2>
+                                            <h5>{{ staff.job }}</h5>
+
+                                        </div>
+                                        <div class="staff-hover-desc">
+                                            <h2>{{ staff.name }}</h2>
+                                            <h5>{{ staff.job }}</h5>
+                                            <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr.</p>
+                                            <div class="scoial_icons">
+                                                <a href="#"><i class="mdi mdi-facebook"></i></a>
+                                                <a href="#"><i class="mdi mdi-rss"></i></a>
+                                                <a href="#"><i class="mdi mdi-google-plus"></i></a>
+                                                <a href="#"><i class="mdi mdi-instagram"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            <div class="col-md-4">
+                                <div class="single-staff">
+                                    <div class="sraff-inner">
+                                        <img src="{% static 'app/staff/staff2.jpg' %}" alt="">
                                         <div class="staff-title">
                                             <span class="plus"></span>
                                             <h2>Soleman</h2>
@@ -348,7 +374,7 @@
                             <div class="col-md-4">
                                 <div class="single-staff">
                                     <div class="sraff-inner">
-                                        <img src="images/staff/staff2.jpg" alt="">
+                                        <img src="{% static 'app/images/staff/staff3.jpg'%}" alt="">
                                         <div class="staff-title">
                                             <span class="plus"></span>
                                             <h2>Soleman</h2>
@@ -372,7 +398,7 @@
                             <div class="col-md-4">
                                 <div class="single-staff">
                                     <div class="sraff-inner">
-                                        <img src="images/staff/staff3.jpg" alt="">
+                                        <img src="{% static 'app/images/staff/staff1.jpg' %}" alt="">
                                         <div class="staff-title">
                                             <span class="plus"></span>
                                             <h2>Soleman</h2>
@@ -396,7 +422,7 @@
                             <div class="col-md-4">
                                 <div class="single-staff">
                                     <div class="sraff-inner">
-                                        <img src="images/staff/staff1.jpg" alt="">
+                                        <img src="{% static 'app/images/staff/staff2.jpg' %}" alt="">
                                         <div class="staff-title">
                                             <span class="plus"></span>
                                             <h2>Soleman</h2>
@@ -420,7 +446,7 @@
                             <div class="col-md-4">
                                 <div class="single-staff">
                                     <div class="sraff-inner">
-                                        <img src="images/staff/staff2.jpg" alt="">
+                                        <img src="{% static 'app/images/staff/staff3.jpg' %}" alt="">
                                         <div class="staff-title">
                                             <span class="plus"></span>
                                             <h2>Soleman</h2>
@@ -444,31 +470,7 @@
                             <div class="col-md-4">
                                 <div class="single-staff">
                                     <div class="sraff-inner">
-                                        <img src="images/staff/staff3.jpg" alt="">
-                                        <div class="staff-title">
-                                            <span class="plus"></span>
-                                            <h2>Soleman</h2>
-                                            <h5>hotel staff</h5>
-
-                                        </div>
-                                        <div class="staff-hover-desc">
-                                            <h2>Soleman</h2>
-                                            <h5>hotel staff</h5>
-                                            <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr.</p>
-                                            <div class="scoial_icons">
-                                                <a href="#"><i class="mdi mdi-facebook"></i></a>
-                                                <a href="#"><i class="mdi mdi-rss"></i></a>
-                                                <a href="#"><i class="mdi mdi-google-plus"></i></a>
-                                                <a href="#"><i class="mdi mdi-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="single-staff">
-                                    <div class="sraff-inner">
-                                        <img src="images/staff/staff1.jpg" alt="">
+                                        <img src="{% static 'app/images/staff/staff1.jpg' %}" alt="">
                                         <div class="staff-title">
                                             <span class="plus"></span>
                                             <h2>Soleman</h2>

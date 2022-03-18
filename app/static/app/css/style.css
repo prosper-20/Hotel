@@ -945,12 +945,12 @@ p.welcome-desc {
   margin-top: 51px;
 }
 .staff-tesimonial {
-  background: rgba(0, 0, 0, 0) url("images/bg/testimonial.jpg") no-repeat fixed center center / cover ;
+  background: rgba(50, 50, 50, 0.2) url("https://cdn.britannica.com/96/115096-050-5AFDAF5D/Bellagio-Hotel-Casino-Las-Vegas.jpg") no-repeat fixed center center / cover ;
   padding: 128px 0 138px;
   position: relative;
 }
 .testimonail-bg-opacity {
-  background: rgba(58, 196, 250, 0.9) none repeat scroll 0 0;
+  background: rgba(50, 50, 50, 0) none repeat scroll 0 0;
 }
 .testimonail-bg-opacity,.community-bg-opacity,.footer-bg-opacity {
    height: 100%;

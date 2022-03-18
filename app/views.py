@@ -33,3 +33,7 @@ def detail_view(request, slug):
 
 def contact(request):
     return render(request, "app/contact-us.html")
+
+
+def about(request):
+    return render(request, "app/about-us.html")

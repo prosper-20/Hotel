@@ -1,9 +1,14 @@
+import imp
+from re import template
 from typing import List
-from django.shortcuts import render, get_object_or_404
+from unicodedata import category
+from urllib import request
+from django.shortcuts import render, get_object_or_404, HttpResponse
 from .models import Room, RoomImage, Staff, Booking
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, FormView
 from blog.models import Post
-
+from .forms import AvailabilityForm
+from booking_functions.availability import check_availability
 
 # def home(request):
 #     rooms = Room.objects.all()
@@ -21,6 +26,31 @@ class HomeView(ListView):
 
 class BookingList(ListView):
     model = Booking
+
+class BookingView(FormView):
+    form_class = AvailabilityForm
+    template_name = "app/availability_form.html"
+
+    def form_valid(self, form):
+        data = form.cleaned_data
+        room_list = Room.objects.filter(category['room_category'])
+        available_rooms = []
+        for room in room_list:
+            if check_availability(room, data['check_in'], data['check_out']):
+                available_rooms.appnd(room)
+        if len(available_rooms) > 0:
+            room = available_rooms[0]
+            booking = Booking.objects.create(
+                user = request.user,
+                room = room,
+                check_in = data['check_in'],
+                check_out = data['check_out']
+            )
+            booking.save()
+            return HttpResponse(booking)
+        else:
+            return HttpResponse
+            
 
 
 

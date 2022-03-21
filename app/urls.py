@@ -10,5 +10,5 @@ urlpatterns = [
     path('search/', views.search_rooms, name="search_rooms"),
     path("booking_list/", BookingList.as_view(), name="booking_list"),
     path('book/', BookingView.as_view(), name="booking_view"),
-    path("booker/", views.tester, name="tester")
+    path("booker/<slug:slug>/", views.tester, name="tester")
 ]

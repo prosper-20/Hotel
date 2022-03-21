@@ -27,12 +27,14 @@ class HomeView(ListView):
 class BookingList(ListView):
     model = Booking
 
-def tester(request):
-    rooms = Room.objects.all()
+def tester(request, slug):
+    room = get_object_or_404(Room, slug=slug)
     context = {
-        "rooms": rooms,
+        "room": room,
     }
     return render(request, 'app/room_booking.html', context)
+
+
 
 class BookingView(FormView):
     form_class = AvailabilityForm

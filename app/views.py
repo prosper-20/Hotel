@@ -36,6 +36,7 @@ def tester(request, slug):
 
 
 
+
 class BookingView(FormView):
     form_class = AvailabilityForm
     template_name = "app/availability_form.html"

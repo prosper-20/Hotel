@@ -205,11 +205,13 @@
                                 <h2>Book A Room</h2>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority ve sffered alteration in some form, by injected humour</p>
                             </div>
-
                             <div class="room-booking-box">
                                 <form action="" method="post">
                                     {{ form|crispy }}
                                     {% csrf_token %}
+                                    <div class="submit-form mt-25">
+                                        <button type="submit">Check Availability/ Book Room</button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -412,3 +414,8 @@
 </body>
 
 </html>
+
+
+
+
+

@@ -27,19 +27,19 @@ class HomeView(ListView):
 class BookingList(ListView):
     model = Booking
 
-# def tester(request, slug):
-#     room = get_object_or_404(Room, slug=slug)
-#     context = {
-#         "room": room,
-#     }
-#     return render(request, 'app/availability_form.html', context)
+def tester(request, slug):
+    room = get_object_or_404(Room, slug=slug)
+    context = {
+        "room": room,
+    }
+    return render(request, 'app/room_booking.html', context)
 
 
 
 
 class BookingView(FormView):
     form_class = AvailabilityForm
-    template_name = "app/availability_form.html"
+    template_name = "app/availability_form_2.html"
 
     def form_valid(self, form):
         data = form.cleaned_data

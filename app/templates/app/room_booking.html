@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 <!doctype html>
 <html class="no-js" lang="">
 
@@ -207,7 +208,7 @@
 
                             <div class="room-booking-box">
                                 <form action="" method="post">
-                                    {{ form.as_p }}
+                                    {{ form|crispy }}
                                     {% csrf_token %}
                                     <div class="submit-form mt-25">
                                         <button type="submit">Check Availability/ Book Room</button>

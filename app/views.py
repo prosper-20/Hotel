@@ -28,7 +28,11 @@ class BookingList(ListView):
     model = Booking
 
 def tester(request):
-    return render(request, 'app/room_booking.html')
+    rooms = Room.objects.all()
+    context = {
+        "rooms": rooms,
+    }
+    return render(request, 'app/room_booking.html', context)
 
 class BookingView(FormView):
     form_class = AvailabilityForm

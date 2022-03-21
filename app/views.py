@@ -33,7 +33,7 @@ class BookingView(FormView):
 
     def form_valid(self, form):
         data = form.cleaned_data
-        room_list = Room.objects.filter(category['room_category'])
+        room_list = Room.objects.filter(category=data['room_category'])
         available_rooms = []
         for room in room_list:
             if check_availability(room, data['check_in'], data['check_out']):

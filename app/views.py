@@ -37,7 +37,7 @@ class BookingView(FormView):
         available_rooms = []
         for room in room_list:
             if check_availability(room, data['check_in'], data['check_out']):
-                available_rooms.appnd(room)
+                available_rooms.append(room)
         if len(available_rooms) > 0:
             room = available_rooms[0]
             booking = Booking.objects.create(

@@ -8,7 +8,7 @@ from .models import Room, RoomImage, Staff, Booking
 from django.views.generic import ListView, DetailView, FormView
 from blog.models import Post
 from .forms import AvailabilityForm
-from booking_functions.availability import check_availability
+from app.booking_functions.availability import check_availability
 
 # def home(request):
 #     rooms = Room.objects.all()
@@ -41,7 +41,7 @@ class BookingView(FormView):
         if len(available_rooms) > 0:
             room = available_rooms[0]
             booking = Booking.objects.create(
-                user = request.user,
+                user = self.request.user,
                 room = room,
                 check_in = data['check_in'],
                 check_out = data['check_out']
@@ -49,7 +49,7 @@ class BookingView(FormView):
             booking.save()
             return HttpResponse(booking)
         else:
-            return HttpResponse
+            return HttpResponse('All of this category of rooms are booked.')
             
 
 

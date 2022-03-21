@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app.apps.AppConfig',
     'blog.apps.BlogConfig',
+    'app.booking_functions',
 ]
 
 MIDDLEWARE = [

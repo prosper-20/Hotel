@@ -18,6 +18,8 @@ from app.booking_functions.availability import check_availability
 #     return render(request, "app/home.html", context)
 
 
+
+
 class HomeView(ListView):
     model = Room
     template_name = 'app/home.html'
@@ -66,6 +68,7 @@ class BookingView(FormView):
 
 class RoomDetailView(DetailView):
     model = Room
+    
 
 
 def detail_view(request, slug):

@@ -5,7 +5,7 @@ from unicodedata import category
 from urllib import request
 from django.shortcuts import render, get_object_or_404, HttpResponse
 from .models import Room, RoomImage, Staff, Booking
-from django.views.generic import ListView, DetailView, FormView
+from django.views.generic import ListView, DetailView, FormView, View
 from blog.models import Post
 from .forms import AvailabilityForm
 from app.booking_functions.availability import check_availability
@@ -17,7 +17,48 @@ from app.booking_functions.availability import check_availability
 #     }
 #     return render(request, "app/home.html", context)
 
+class RoomDetailBookingView(View):
+    def get(self, request, *args, **kwargs):
+        category = self.kwargs.get('category', None)
+        form = AvailabilityForm()
+        room_list = Room.objects.filter(category=category)
 
+        if len(room_list) > 0:
+            room = room_list[0]
+            room_category = dict(room.ROOM_CATEGORIES).get(room.category, None)
+            context = {
+                'room_category': room_category,
+                'form': form,
+            }
+            return render(request, 'room_detail_view.html', context)
+        else:
+            return HttpResponse('Category does not exist')
+
+    def post(self, request, *args, **kwargs):
+        category = self.kwargs.get('category', None)
+        room_list = Room.objects.filter(category=category)
+        form = AvailabilityForm(request.POST)
+
+        if form.is_valid():
+            data = form.cleaned_data
+
+        available_rooms = []
+        for room in room_list:
+            if check_availability(room, data['check_in'], data['check_out']):
+                available_rooms.append(room)
+
+        if len(available_rooms) > 0:
+            room = available_rooms[0]
+            booking = Booking.objects.create(
+                user=self.request.user,
+                room=room,
+                check_in=data['check_in'],
+                check_out=data['check_out']
+            )
+            booking.save()
+            return HttpResponse(booking)
+        else:
+            return HttpResponse('All of this category of rooms are booked!! Try another one')
 
 
 class HomeView(ListView):

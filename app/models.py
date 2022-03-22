@@ -13,8 +13,17 @@ class Category(models.Model):
 
 
 class Room(models.Model):
+    ROOM_CATEGORIES = (
+        ('AC', 'AC'),
+        ('DEL', 'DELUXE'),
+        ('BUS', 'BUSINESS'),
+        ('STA', 'STANDARD'),
+        ('EXE', 'EXECUTIVE'),
+        ('KN', 'KING'),
+        ('PNT', 'PENTHOUSE')
+    )
     number = models.IntegerField()
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.CharField(max_length=3, choices=ROOM_CATEGORIES)
     description = models.TextField()
     beds = models.IntegerField()
     capacity = models.IntegerField()
